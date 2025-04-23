@@ -1,14 +1,21 @@
 package com.vulpuxmecatroncus.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.*;
 
 @Data
-@AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "car")
 public class Car {
+    @Id
+    private Long id;
+    @NonNull
     private String model;
+    @NonNull
     private String color;
-    
+
 }
